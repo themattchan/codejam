@@ -39,7 +39,7 @@ write that stuff out to a file, numbering them from 1
 '''
 # print results
 # print len(results)
-with open('results-large.out','w+') as f:
+with open('A-results-large.out','w+') as f:
 	no = 1
 	for r in results:
 		f.write("Case #"+str(no)+": "+r+"\n")
