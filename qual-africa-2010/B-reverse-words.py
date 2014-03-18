@@ -9,8 +9,8 @@ with open('B-results-large.out','w+') as f:
 	 for sentence in sentences:
 	 	 result = ""
 		 for word in reversed(sentence):
-		 	 result = result + word + " "
-		 
-	 	 f.write("Case #"+str(n)+": "+result+"\n")
+		 	  result = result + word + " "
+		
+		 f.write("Case #"+str(n)+": "+result+"\n")
 		 n = n +1
 		 	 
