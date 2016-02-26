@@ -1,0 +1,20 @@
+UNSAFE
+ /Users/matt/prog_contests/codejam/2015/flycheck_ovation.hs:26:45-48: Error: Liquid Type Mismatch
+   Inferred type
+     VV : [[Char]]
+  
+   not a subtype of Required type
+     VV : [[Char]] | len VV > 0
+  
+   In Context
+     VV : [[Char]] | len VV >= 0
+ /Users/matt/prog_contests/codejam/2015/flycheck_ovation.hs:26:72-76: Error: Liquid Type Mismatch
+   Inferred type
+     VV : [[Char]] | VV == input && len VV >= 0
+  
+   not a subtype of Required type
+     VV : [[Char]] | len VV > 0
+  
+   In Context
+     VV    : [[Char]] | VV == input && len VV >= 0
+     input : [[Char]] | len input >= 0
