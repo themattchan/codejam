@@ -38,8 +38,8 @@ class Chicks {
 	public static void main(String[] args) throws Exception {
 		Scanner in = new Scanner(new File("B-large-practice.in"));
 		PrintWriter out = new PrintWriter(new FileOutputStream("B-large-practice.out", false));
-		int cases = in.nextInt();
 
+		int cases = in.nextInt();
 		for (int i = 1; i <= cases; i++) {
 			int N,K,B,T;
 			N = in.nextInt();
