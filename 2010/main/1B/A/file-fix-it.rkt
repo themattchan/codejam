@@ -25,7 +25,7 @@
  
 
 (define (parse-path path)
-  (map string->symbol (string-split path"/")))
+  (map string->symbol (string-split path "/")))
 
 
 (define (run-case)
