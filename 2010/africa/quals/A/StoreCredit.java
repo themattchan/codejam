@@ -3,38 +3,38 @@ import java.util.stream.*;
 import java.io.*;
 
 class StoreCredit {
-    Scanner in; PrintWriter out;
-    StoreCredit (Scanner in, PrintWriter out) {
-        this.in = in; this.out = out;
-    }
+	Scanner in; PrintWriter out;
+	StoreCredit (Scanner in, PrintWriter out) {
+		this.in = in; this.out = out;
+	}
 
-    public static void main(String[] args) throws Exception {
-        Scanner in = new Scanner(new File("A-large-practice.in"));
-        PrintWriter out = new PrintWriter(new FileOutputStream("A-large-practice.out", false));
-        StoreCredit sc = new StoreCredit(in,out);
+	public static void main(String[] args) throws Exception {
+		Scanner in = new Scanner(new File("A-large-practice.in"));
+		PrintWriter out = new PrintWriter(new FileOutputStream("A-large-practice.out", false));
+		StoreCredit sc = new StoreCredit(in,out);
 
-        //      sc.withHashMap();
-        sc.withSortedByIndex();
+		//		sc.withHashMap();
+		sc.withSortedByIndex();
 
-        in.close();
-        out.close();
-    }
+		in.close();
+		out.close();
+	}
 
-    // Also try doing this with quickselect...
+	// Also try doing this with quickselect...
 
-    // The best because limits are low, needs ~32 ints
-    private void withBitvector() throws Exception {
-        int cases = in.nextInt();
-        for (int i = 1; i <= cases; i++) {
-            int C = in.nextInt();
-            int N = in.nextInt();
-            BitSet PS = new BitSet(1001);
+	// The best because limits are low, needs ~32 ints
+	private void withBitvector() throws Exception {
+		int cases = in.nextInt();
+		for (int i = 1; i <= cases; i++) {
+			int C = in.nextInt();
+			int N = in.nextInt();
+			BitSet PS = new BitSet(1001);
 
-            for (int j = 1; j <= N; j++)
-                PS.set(in.nextInt(), true);
+			for (int j = 1; j <= N; j++)
+				PS.set(in.nextInt(), true);
 
 
-        }
+		}
 	}
 
 	private void withHashMap() throws Exception {
