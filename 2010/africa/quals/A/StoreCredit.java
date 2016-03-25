@@ -3,7 +3,7 @@ import java.util.stream.*;
 import java.io.*;
 
 class StoreCredit {
-	Scanner in; PrintWriter out;
+	private Scanner in; private PrintWriter out;
 	StoreCredit (Scanner in, PrintWriter out) {
 		this.in = in; this.out = out;
 	}
