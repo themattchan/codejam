@@ -51,7 +51,7 @@ class Chicks {
 			int[] vs = strsToInts(in.nextLine().split("\\s+"));
 
 			Optional<Integer> swaps = pickupChicks(N,K,B,T,xs,vs);
-			String sswaps = swaps.map(x -> x.toString()).orElse("IMPOSSIBLE");
+			String sswaps = swaps.map(String::valueOf).orElse("IMPOSSIBLE");
 			out.printf("Case #%d: %s\n", i, sswaps);
 		}
 
