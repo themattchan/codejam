@@ -32,9 +32,9 @@ with open("A-small-attempt3.in", 'r') as file:
             arrangements.append([int(i) for i in input[get_line + int(input[get_line])].split()])
             get_line +=5
 
-        arrangements = zip(arrangements[0::2], arrangements[1::2])
-            
-            
-        for i, pair in enumerate(arrangements):
+            arrangements = zip(arrangements[0::2], arrangements[1::2])
+
+
+            for i, pair in enumerate(arrangements):
                 output.write("Case #"+str(i+1)+": "+
-                             find_common(pair[0], pair[1]))
+                                 find_common(pair[0], pair[1]))
