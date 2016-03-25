@@ -15,4 +15,4 @@ main = do
     |>> lines
     |>> tail
     |>> map (intercalate " " . reverse . words)
-    >>=  zipWithM_ (printCase out) [1..]
+    >>= zipWithM_ (printCase out) [1..]
