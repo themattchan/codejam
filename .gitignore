@@ -112,3 +112,5 @@ target/
 # pyenv
 .python-version
 
+### C++
+*.bin
