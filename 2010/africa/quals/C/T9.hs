@@ -22,14 +22,8 @@ letters = foldr (uncurry M.insert) M.empty kvs'
         zero = (Letter ' ', Exp 0 "0")
         space = (Space, Exp 0 " ")
 
-toLetter :: Char -> Letter
-toLetter c = if isSpace c then Space else Letter c
-
 expand :: Letter -> Expansion
 expand = fromJust . flip M.lookup letters
-
-getKey :: Letter -> Int
-getKey = key . expand
 
 getExpansion :: Letter -> String
 getExpansion = expansion . expand
