@@ -50,7 +50,7 @@ class StoreCredit {
 
 			for (Map.Entry<Integer,Integer> kv : PS.entrySet()) {
 				int k = kv.getKey(), v = kv.getValue();
-				Optional<Integer> nv = Optional.of(PS.get(C-k));
+				Optional<Integer> nv = Optional.ofNullable(PS.get(C-k));
 				if (nv.isPresent()) {
 					out.printf("Case #%d: %d %d\n", i,
 							   Math.min(v,nv.get()), Math.max(v,nv.get()));
