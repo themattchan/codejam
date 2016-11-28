@@ -3,7 +3,7 @@
 #define fmt "Case #%d: %d\n"
 #define ALLSET 0b1111111111
 
-void setBV (unsigned int *bv, int n)
+void setBV(unsigned int *bv, int n)
 {
 	while (n > 0) {
 		*bv |= 1 << (n % 10);
@@ -33,8 +33,8 @@ int countSheep(int n)
 int main()
 {
 	int iters, n;
-	FILE* input = fopen("A-small-attempt5.in", "r");
-	FILE* output = fopen("A-small-attempt5.out", "w+");
+	FILE* input = fopen("A-large.in", "r");
+	FILE* output = fopen("A-large.out", "w+");
 	fscanf(input, "%d", &iters);
 	for (int i = 1; i <= iters; i++) {
 		fscanf(input, "%d", &n);
