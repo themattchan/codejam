@@ -3,14 +3,12 @@ import Data.Bifunctor
 import Control.Monad
 -- assume left is top
 flipcake :: String -> Int
-flipcake s
-  | all (== '+') s = 0
-  | otherwise =
-    let (ms, (ps, rest)) = second (span (== '+')) . span (=='-') $ s
-    in case rest of
-      [] -> mflip ms -- if rest is nothing, then just flip top '-'s and we are done
-      _  -> mflip ms + mflip ps + flipcake rest
+flipcake s = case rest of
+    [] -> mflip ms -- if rest is nothing, then just flip top '-'s and we are done
+    _  -> mflip ms + mflip ps + flipcake rest
   where
+    (ms, (ps, rest)) = second (span (== '+')) . span (=='-') $ s
+
     mflip [] = 0
     mflip  _ = 1
 
